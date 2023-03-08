@@ -1,8 +1,55 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { Instagram, Linkedin, Twitter } from 'react-feather'
 
+
+
 const ContactForm = () => {
+
+  const [contactDetails, setContactDetails] = useState({
+    user_name: '',
+    user_lastname: '',
+    user_email: '',
+    user_phone: '',
+    user_subject: '',
+    message: '',
+  })
+
+  const handleChange = (e) => {
+    const {name, value} = e.target
+
+    setContactDetails((prevValue) => {
+      return {
+        ...prevValue,
+        [name]: value
+      }
+
+      console.log(prevValue);
+    })
+  }
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+
+      emailjs.sendForm('service_jw4esws', 'template_ybwzlmf', form.current, 'TScVRtSxjchoseKm2')
+        .then((result) => {
+            console.log(result.text);
+            setContactDetails({
+              user_name: '',
+              user_lastname: '',
+              user_email: '',
+              user_phone: '',
+              user_subject: '',
+              message: '',
+            })
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
+
   return (
 
     <div className='w-full bg-white relative overflow-hidden'>
@@ -184,7 +231,7 @@ const ContactForm = () => {
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                   <h3 className="text-lg font-medium text-warm-gray-900">Send us a message</h3>
-                  <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                  <form method='POST' ref={form} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={sendEmail}>
                     <div>
                       <label htmlFor="first-name" className="block text-sm font-medium text-warm-gray-900">
                         First name
@@ -192,10 +239,12 @@ const ContactForm = () => {
                       <div className="mt-1">
                         <input
                           type="text"
-                          name="first-name"
+                          name="user_name"
                           id="first-name"
                           autoComplete="given-name"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
+                          onChange={handleChange}
+                          value={contactDetails.user_name}
                         />
                       </div>
                     </div>
@@ -206,10 +255,12 @@ const ContactForm = () => {
                       <div className="mt-1">
                         <input
                           type="text"
-                          name="last-name"
+                          name="user_lastname"
                           id="last-name"
                           autoComplete="family-name"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
+                          onChange={handleChange}
+                          value={contactDetails.user_lastname}
                         />
                       </div>
                     </div>
@@ -220,10 +271,12 @@ const ContactForm = () => {
                       <div className="mt-1">
                         <input
                           id="email"
-                          name="email"
+                          name="user_email"
                           type="email"
                           autoComplete="email"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
+                          onChange={handleChange}
+                          value={contactDetails.user_email}
                         />
                       </div>
                     </div>
@@ -239,11 +292,13 @@ const ContactForm = () => {
                       <div className="mt-1">
                         <input
                           type="text"
-                          name="phone"
+                          name="user_phone"
                           id="phone"
                           autoComplete="tel"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
                           aria-describedby="phone-optional"
+                          onChange={handleChange}
+                          value={contactDetails.user_phone}
                         />
                       </div>
                     </div>
@@ -254,9 +309,11 @@ const ContactForm = () => {
                       <div className="mt-1">
                         <input
                           type="text"
-                          name="subject"
+                          name="user_subject"
                           id="subject"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
+                          onChange={handleChange}
+                          value={contactDetails.user_subject}
                         />
                       </div>
                     </div>
@@ -276,6 +333,8 @@ const ContactForm = () => {
                           rows={4}
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
                           aria-describedby="message-max"
+                          onChange={handleChange}
+                          value={contactDetails.message}
                           defaultValue={''}
                         />
                       </div>

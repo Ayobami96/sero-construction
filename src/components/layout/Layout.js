@@ -1,18 +1,18 @@
 import Head from 'next/head'
-import React from 'react'
+import React, {Fragment} from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
 const Layout = (props) => {
   return (
-    <div>
+    <Fragment>
         <Head>
             <link rel="icon" href="/favicon.ico" /> 
         </Head>
         <Navbar />
         <main>{props.children}</main>
         <Footer />
-    </div>
+    </Fragment>
   )
 }
 

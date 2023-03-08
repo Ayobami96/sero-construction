@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.10",
     "@heroicons/react": "^2.0.16",
     "@next/font": "13.1.6",
     "animate.css": "^4.1.1",
+    "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "feather-icons": "^4.29.0",

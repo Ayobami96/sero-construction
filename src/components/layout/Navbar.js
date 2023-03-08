@@ -19,7 +19,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     const handleNav = () => {
-        setNav(!nav);
+        setNav(prev=>!prev);
     }
 
     useEffect(() => {
@@ -34,12 +34,11 @@ const Navbar = () => {
                     <Link href="/"><Image src={seroLogo} width={100} height={100} /></Link>
                 </div>
 
-                <ul className='hidden lg:flex gap-x-10 text-seroBlue font-medium text-base'>
-                    <li><Link href="/">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li>
-                        <Popover className="relative">
-                        {({ open }) => (
+                <div className='hidden lg:flex gap-x-10 text-seroBlue font-medium text-base'>
+                    <Link href="/">Home</Link>
+                    <Link href="/about">About</Link>
+                    <Popover className="relative">
+                        {({ open, close }) => (
                         <>
                         <Popover.Button
                         className={classNames(
@@ -73,6 +72,7 @@ const Navbar = () => {
                         <Link
                         key={item.name}
                         href={item.href}
+                        onClick={() => close()}
                         className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50"
                         >
                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
@@ -103,10 +103,9 @@ const Navbar = () => {
                         </Transition>
                         </>
                         )}
-                        </Popover>
-                    </li>
-                    <li><Link href="/contact-us">Contact Us</Link></li>
-                </ul>
+                        </Popover> 
+                    <Link href="/contact-us">Contact Us</Link>
+                </div>
 
                 <button
                 type="button"
@@ -121,7 +120,7 @@ const Navbar = () => {
             </div>
 
             <div className='lg:hidden'>
-                <div className={`${nav ? 'fixed inset-0 z-50 overflow-hidden ' : 'hidden'}`}>
+                <div className={classNames(nav ? 'fixed inset-0 z-50 overflow-hidden ' : 'hidden')}>
                     <div className='absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100'></div>
                     <div className='fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0'>
                         <div className='min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10 transition'>
@@ -139,7 +138,7 @@ const Navbar = () => {
                                     <li><Link href="/about">About</Link></li>
                                     <li>
                                         <Popover className="relative">
-                                        {({ open }) => (
+                                        {({ open, close }) => (
                                         <>
                                         <Popover.Button
                                         className={classNames(
@@ -173,6 +172,7 @@ const Navbar = () => {
                                         <Link
                                         key={item.name}
                                         href={item.href}
+                                        onClick={() => close()}
                                         className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50"
                                         >
                                         <div className="">
