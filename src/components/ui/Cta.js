@@ -39,13 +39,17 @@ const Cta = () => {
 
                 <div className='flex items-center'>
                     <div className='sm:basis-1/2 space-y-6'>
-                        <h3 className='capitalize text-4xl text-white leading-snug font-semibold'>Let's take that your building project to the the next level.</h3>
-                        <p className='font-normal text-base text-white leading-relaxed'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ex alias officiis aliquid impedit eius quod qui et. Non, nisi.</p>
+                        <h3 className='capitalize text-4xl text-white leading-snug font-semibold'>
+                        Let us take that your building project to the the next level.
+                        </h3>
+                        <p className='font-normal text-base text-white leading-relaxed'>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat ex alias officiis aliquid impedit eius quod qui et. Non, nisi.
+                        </p>
                         <div>
                             <Link href='#'>
                             <button
                             type="button"
-                            className="animate__animated animate__slideInUp border-btn"
+                            className="border-btn"
                             >
                             Book a Consultation
                             </button>

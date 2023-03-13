@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image'
-import seroLogo from '/public/assets/logo/serooblue.png';
-import Link from 'next/link';
-import { Menu, X } from 'react-feather';
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { navServices } from '../data/data';
+import React, { useState, useEffect } from "react";
+import Image from "next/image"
+import seroLogo from "/public/assets/logo/serooblue.png";
+import Link from "next/link";
+import { Menu, X } from "react-feather";
+import { Fragment } from "react"
+import { Popover, Transition } from "@headlessui/react"
+import { ChevronDownIcon } from "@heroicons/react/20/solid"
+import { navServices } from "../data/data";
 
 
 
 
 function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(" ")
   }
 
 const Navbar = () => {
@@ -27,14 +27,14 @@ const Navbar = () => {
     }, [])
 
   return (
-    <div className='bg-yellow-400 shadow-md relative'>
-        <nav className='px-4 lg:px-24 py-1 container md:mx-auto'>
-            <div className='flex items-center justify-between'>
+    <div className="bg-yellow-400 shadow-md relative">
+        <nav className="px-4 lg:px-24 py-1 container md:mx-auto">
+            <div className="flex items-center justify-between">
                 <div>
-                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt='sero logo desktop' /></Link>
+                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt="sero logo desktop" /></Link>
                 </div>
 
-                <div className='hidden lg:flex gap-x-10 text-seroBlue font-medium text-base'>
+                <div className="hidden lg:flex gap-x-10 text-seroBlue font-medium text-base">
                     <Link href="/">Home</Link>
                     <Link href="/about">About</Link>
                     <Popover className="relative">
@@ -42,15 +42,15 @@ const Navbar = () => {
                         <>
                         <Popover.Button
                         className={classNames(
-                        open ? 'text-seroBlue' : 'text-seroBlue',
-                        'group inline-flex items-center outline-none'
+                        open ? "text-seroBlue" : "text-seroBlue",
+                        "group inline-flex items-center outline-none"
                         )}
                         >
                         <span>Service</span>
                         <ChevronDownIcon
                         className={classNames(
-                        open ? 'text-seroBlue' : 'text-seroBlue',
-                        'ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-seroBlue'
+                        open ? "text-seroBlue" : "text-seroBlue",
+                        "ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-seroBlue"
                         )}
                         aria-hidden="true"
                         />
@@ -94,7 +94,7 @@ const Navbar = () => {
                         <span className="text-base font-medium text-seroBlue">Book a Consultation</span>
                         </span>
                         <span className="mt-1 block text-sm text-gray-500">
-                        Let's provide you with an unquestionable Top-Tier Service today.
+                        Let"s provide you with an unquestionable Top-Tier Service today.
                         </span>
                         </Link>
                         </div>
@@ -114,26 +114,26 @@ const Navbar = () => {
                 Book a Consultation
                 </button>
 
-                <div className='lg:hidden block pr-6' onClick={handleNav}>
-                    {nav ? <X size={26} className='text-seroBlue' /> : <Menu size={26} className='text-seroBlue' />}
+                <div className="lg:hidden block pr-6" onClick={handleNav}>
+                    {nav ? <X size={26} className="text-seroBlue" /> : <Menu size={26} className="text-seroBlue" />}
                 </div>
             </div>
 
-            <div className='lg:hidden'>
-                <div className={classNames(nav ? 'fixed inset-0 z-50 overflow-hidden ' : 'hidden')}>
-                    <div className='absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100'></div>
-                    <div className='fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0'>
-                        <div className='min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10 transition'>
-                            <nav className='divide-y divide-slate-900/10 text-base leading-7 text-seroBlue]'>
-                                <div className='flex items-center justify-between px-3 py-2'>
-                                    <Image src={seroLogo} width={80} height={80} alt='sero logo mobile' />
+            <div className="lg:hidden">
+                <div className={classNames(nav ? "fixed inset-0 z-50 overflow-hidden " : "hidden")}>
+                    <div className="absolute inset-0 bg-slate-900/25 backdrop-blur-sm transition-opacity opacity-100"></div>
+                    <div className="fixed inset-0 flex items-start justify-end overflow-y-auto translate-x-0">
+                        <div className="min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10 transition">
+                            <nav className="divide-y divide-slate-900/10 text-base leading-7 text-seroBlue]">
+                                <div className="flex items-center justify-between px-3 py-2">
+                                    <Image src={seroLogo} width={80} height={80} alt="sero logo mobile" />
                                     <div onClick={() => {setNav(false)}}>
-                                         <X size={26} className='text-seroBlue' />
+                                         <X size={26} className="text-seroBlue" />
                                     </div>
                                 </div>
 
-                                <div className='p-8'>
-                                    <ul className='flex flex-col space-y-6 text-seroBlue font-medium text-base'>
+                                <div className="p-8">
+                                    <ul className="flex flex-col space-y-6 text-seroBlue font-medium text-base">
                                     <li><Link href="/" onClick={() => setNav(false)}>Home</Link></li>
                                     <li><Link href="/about" onClick={() => setNav(false)}>About</Link></li>
                                     <li>
@@ -142,15 +142,15 @@ const Navbar = () => {
                                         <>
                                         <Popover.Button
                                         className={classNames(
-                                        open ? 'text-seroBlue' : 'text-seroBlue',
-                                        'group inline-flex items-center outline-none'
+                                        open ? "text-seroBlue" : "text-seroBlue",
+                                        "group inline-flex items-center outline-none"
                                         )}
                                         >
                                         <span>Service</span>
                                         <ChevronDownIcon
                                         className={classNames(
-                                        open ? 'text-seroBlue' : 'text-seroBlue',
-                                        'ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-seroBlue'
+                                        open ? "text-seroBlue" : "text-seroBlue",
+                                        "ml-2 h-5 w-5 transition duration-150 ease-in-out group-hover:text-seroBlue"
                                         )}
                                         aria-hidden="true"
                                         />
@@ -192,7 +192,7 @@ const Navbar = () => {
                                     </ul>
                                 </div>
 
-                                <div className='px-8 py-5'>
+                                <div className="px-8 py-5">
                                     <button
                                     type="button"
                                     className="inline-flex items-center rounded-md border border-transparent bg-seroBlue px-4 py-2 text-base font-medium text-yellow-400 focus:outline-none"
