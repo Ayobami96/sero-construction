@@ -19,7 +19,7 @@ const OurExpertise = () => {
                 {constructionExpertise.map(({title, description, image}, key) => (
                     <div key={title} className='flex items-center justify-center md:flex-row flex-col gap-y-4 md:gap-x-10'>
                         <div className='basis-1/2'>
-                            <Image src={image} width='100%' height='500' className='rounded-xl' alt={title} />
+                            <Image src={image} width='100%' height='500' className='rounded-xl' alt='' />
                         </div>
                        <div className={`basis-1/2 space-y-6 ${key%2 === 0 ? 'order-last' : 'order-first'}`}>
                             <h2 className='text-white font-semibold text-3xl leading-snug'>{title}</h2>

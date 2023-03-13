@@ -31,7 +31,7 @@ const Navbar = () => {
         <nav className='px-4 lg:px-24 py-1 container md:mx-auto'>
             <div className='flex items-center justify-between'>
                 <div>
-                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt='sero-logo' /></Link>
+                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt='sero logo desktop' /></Link>
                 </div>
 
                 <div className='hidden lg:flex gap-x-10 text-seroBlue font-medium text-base'>
@@ -126,7 +126,7 @@ const Navbar = () => {
                         <div className='min-h-full w-[min(20rem,calc(100vw-theme(spacing.10)))] bg-white shadow-2xl ring-1 ring-black/10 transition'>
                             <nav className='divide-y divide-slate-900/10 text-base leading-7 text-seroBlue]'>
                                 <div className='flex items-center justify-between px-3 py-2'>
-                                    <Image src={seroLogo} width={80} height={80} />
+                                    <Image src={seroLogo} width={80} height={80} alt='sero logo mobile' />
                                     <div onClick={() => {setNav(false)}}>
                                          <X size={26} className='text-seroBlue' />
                                     </div>
