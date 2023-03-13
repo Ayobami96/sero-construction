@@ -31,7 +31,7 @@ const Navbar = () => {
         <nav className='px-4 lg:px-24 py-1 container md:mx-auto'>
             <div className='flex items-center justify-between'>
                 <div>
-                    <Link href="/"><Image src={seroLogo} width={100} height={100} /></Link>
+                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt='sero-logo' /></Link>
                 </div>
 
                 <div className='hidden lg:flex gap-x-10 text-seroBlue font-medium text-base'>
@@ -134,8 +134,8 @@ const Navbar = () => {
 
                                 <div className='p-8'>
                                     <ul className='flex flex-col space-y-6 text-seroBlue font-medium text-base'>
-                                    <li><Link href="/">Home</Link></li>
-                                    <li><Link href="/about">About</Link></li>
+                                    <li><Link href="/" onClick={() => setNav(false)}>Home</Link></li>
+                                    <li><Link href="/about" onClick={() => setNav(false)}>About</Link></li>
                                     <li>
                                         <Popover className="relative">
                                         {({ open, close }) => (
@@ -172,7 +172,7 @@ const Navbar = () => {
                                         <Link
                                         key={item.name}
                                         href={item.href}
-                                        onClick={() => close()}
+                                        onClick={() => setNav(false)}
                                         className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50"
                                         >
                                         <div className="">
@@ -188,7 +188,7 @@ const Navbar = () => {
                                         )}
                                         </Popover>
                                     </li>
-                                    <li><Link href="/contact-us">Contact Us</Link></li>
+                                    <li><Link href="/contact-us" onClick={() => setNav(false)}>Contact Us</Link></li>
                                     </ul>
                                 </div>
 

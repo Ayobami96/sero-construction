@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
 
                 <div className='flex flex-col justify-center items-center text-center mt-6'>
-                    <Image src={whiteLogo} height='100' width='100' />
+                    <Image src={whiteLogo} height='100' width='100' alt='sero-footer-logo' />
                     <p className='font-normal text-sm text-white'>Copyright © {currentYear} Sero Construction</p>
                 </div>
 
