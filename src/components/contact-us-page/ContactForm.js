@@ -54,7 +54,7 @@ const ContactForm = () => {
 
     <div className='w-full bg-white relative overflow-hidden'>
         
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative w-full sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
         <section className="relative bg-white" aria-labelledby="contact-heading">
           <div className="absolute h-1/2 w-full bg-warm-gray-50" aria-hidden="true" />
           {/* Decorative dot pattern */}

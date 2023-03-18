@@ -6,7 +6,7 @@ import { Instagram, Twitter, Linkedin } from 'react-feather';
 const TeamMember = () => {
   return (
     <div className='w-full bg-seroBlue relative'>    
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <h2 className='font-semibold text-white text-3xl capitalize text-center'>Meet our leadership</h2>
             <div className='flex items-center gap-y-6 flex-wrap md:flex-row flex-col justify-center mt-20'>
                 {teamMember.map(({name, role, image, linkedinHref, instagramHref, twitterHref}) => (

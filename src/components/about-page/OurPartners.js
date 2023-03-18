@@ -4,7 +4,7 @@ import React from 'react'
 const OurPartners = () => {
   return (
     <div className='w-full bg-gray-50 relative'>    
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className='text-2xl font-semibold text-seroBlue text-center'>
                 <h2>Trusted By Leading Brands</h2>
             </div>

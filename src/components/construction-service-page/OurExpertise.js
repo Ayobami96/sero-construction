@@ -6,7 +6,7 @@ const OurExpertise = () => {
   return (
     <div className='w-full bg-seroBlue relative overflow-hidden'>
         
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             
             <div className='text-3xl font-semibold text-white text-center'>
                <h2 className='leading-snug'>

@@ -5,7 +5,7 @@ import overviewImg from '/public/assets/images/real-estate-house.jpg';
 const CompanyOverview = () => {
   return (
     <div className='w-full bg-white relative'>    
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
 
             <div className='flex items-center md:gap-x-10 gap-y-6 md:flex-row flex-col justify-center'>
                 <div className='basis-1/2 flex flex-col gap-y-4'>

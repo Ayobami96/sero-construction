@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div className="bg-yellow-400 shadow-md relative">
-        <nav className="px-4 lg:px-24 py-1 container md:mx-auto">
+        <nav className="px-4 lg:px-24 py-1 w-full md:mx-auto">
             <div className="flex items-center justify-between">
                 <div>
                     <Link href="/"><Image src={seroLogo} width={100} height={100} alt="sero logo desktop" /></Link>

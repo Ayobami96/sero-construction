@@ -7,7 +7,7 @@ const Faqs = () => {
   return (
         <div className='w-full bg-white relative'>
 
-            <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+            <div className='relative  sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6  lg:px-8">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
@@ -22,9 +22,9 @@ const Faqs = () => {
                         <span className="text-base font-semibold leading-7 text-seroBlue">{question}</span>
                         <span className="ml-6 flex h-7 items-center">
                           {open ? (
-                            <PlusSmallIcon className="h-6 w-6" aria-hidden="true" />
-                          ) : (
                             <MinusSmallIcon className="h-6 w-6" aria-hidden="true" />
+                          ) : (
+                            <PlusSmallIcon className="h-6 w-6" aria-hidden="true" />
                           )}
                         </span>
                       </Disclosure.Button>

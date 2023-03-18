@@ -7,13 +7,13 @@ const Services = () => {
   return (
     <div className='w-full bg-seroBlue relative overflow-hidden'>
         
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             
             <div className='text-3xl font-semibold text-white text-center'>
-               <h2 className='leading-snug'>
-                Your One Stop Plug For All Your<br></br> Construction Services
+               <h2 className='leading-snug capitalize'>
+               An Expert Real estate development and <br></br>construction company you can trust.
                </h2>
-               <p className='font-normal text-white text-base sm:px-[250px] mt-4 leading-relaxed'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet cum autem reprehenderit sit eum, expedita dicta tenetur. Reiciendis excepturi fugit veniam quisquam ratione dolor molestiae?</p>
+               <p className='font-normal text-white text-base sm:px-[250px] mt-4 leading-relaxed'>We create wealth for our clients, investors and partners through real estate by offering these ranges of services;</p>
             </div>
 
             <div className='grid grid-cols-1 md:gap-y-20 gap-y-10 mt-20'>

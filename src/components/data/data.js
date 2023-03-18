@@ -21,17 +21,17 @@ import {
 export const coreValuesData = [
     {
         title: 'Excellence',
-        description:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem placeat sint odit voluptate, eligendi asperiores.',
+        description:  'At Sero Construction, we have a culture of honesty, psychological safety, and mutual respect which builds the trust our clients has in us.',
         icon: excellenceIcon,
     },
     {
         title: 'Deliigence',
-        description:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem placeat sint odit voluptate, eligendi asperiores.',
+        description:  'We believe in giving value by making sure all our projects and services are fit for intended use, with reasonable cost.',
         icon: diligenceIcon,
     },
     {
         title: 'Integrity',
-        description:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem placeat sint odit voluptate, eligendi asperiores.',
+        description:  'We think outside the box to provide unique solutions to complex issues and consistently push for better ways to serve our clients, employees and the organization',
         icon: integrityIcon,
     },
 ]
@@ -39,25 +39,25 @@ export const coreValuesData = [
 export const services = [
     {
         title: 'Construction Services',
-        description: 'Shape a more efficient and profitable traffic while increase revenue from your DSP partners through machine learning user profiling data in real-time. Increase optimal QPS, traded value, wins rates, and infrastructure cost savings.',
+        description: 'Our experienced Construction team have the resources to handle both residential and commercial construction projects and build comfortable, affordable, smart, luxury homes with impeccable finesse.',
         image: builderImg,
         href: '/construction-service'
     },
     {
         title: 'Real Estate Development',
-        description: 'Shape a more efficient and profitable traffic while increase revenue from your DSP partners through machine learning user profiling data in real-time. Increase optimal QPS, traded value, wins rates, and infrastructure cost savings.',
+        description: 'We offer custom plots, finished home, off-plan investments in a simple, secure and profitable way. We develop the standard of properties with quality management and ensure customer’s satisfaction.',
         image: realEstate,
         href: '/real-estate-development'
     },
     {
         title: 'Architectural Designs',
-        description: 'Shape a more efficient and profitable traffic while increase revenue from your DSP partners through machine learning user profiling data in real-time. Increase optimal QPS, traded value, wins rates, and infrastructure cost savings.',
+        description: 'We offer professional services in interior & exterior designing.',
         image: architecturalDesign,
         href: '/architectural-design'
     },
     {
         title: 'Building Materials',
-        description: 'Shape a more efficient and profitable traffic while increase revenue from your DSP partners through machine learning user profiling data in real-time. Increase optimal QPS, traded value, wins rates, and infrastructure cost savings.',
+        description: 'We supply and sell the essential products used for building construction such as; Granite, Sharp sand, Cement, Red bricks & concrete bricks, iron rod and many more.',
         image: buildingMaterial,
         href: '/building-materials'
     },

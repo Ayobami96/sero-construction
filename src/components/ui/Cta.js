@@ -5,7 +5,7 @@ const Cta = () => {
   return (
     <div className='w-full bg-white relative overflow-hidden'>
         
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative w-full sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className='overflow-hidden bg-gradient-to-b from-seroBlue to-seroBlue py-14 px-9 rounded-xl'>
                 <div className="pointer-events-none absolute inset-0 " aria-hidden="true">
                    <svg

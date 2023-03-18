@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className=' w-full bg-seroBlue relative overflow-hidden'>
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative w-full sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className="flex md:flex-row flex-col md:justify-center md:items-center gap-10">
                 <div className='basis-1/3 text-white'>
                 <h4 className='font-medium text-lg'>Services</h4>

@@ -7,7 +7,7 @@ const CoreValues = () => {
   return (
     <div className='w-full bg-white relative overflow-hidden'>
         
-        <div className='relative container sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className='hidden sm:block lg:absolute lg:right-0 lg:top-0'>
                 <Image src={patternBg} width='500' height='500' className='rotate-45' alt='ptter-bg' />
             </div>

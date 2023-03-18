@@ -5,7 +5,7 @@ import workersImg from '/public/assets/images/architect.png'
 const About = () => {
   return (
     <div className='w-full bg-white'>
-        <div className='relative container flex flex-col items-center sm:flex-row sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative flex flex-col items-center sm:flex-row sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className='relative block basis-1/2'>
                 <Image src={workersImg} width='600' height='600' alt="workers-img" className='rounded-xl'  />
             </div>
@@ -14,8 +14,11 @@ const About = () => {
                 <span className='capitalize text-slate-500 font-medium text-lg'>Our Company</span>
                 <p className='font-semibold text-seroBlue text-3xl mt-2'>Sero Construction Building Your Dream Home</p>
                 <div className='space-y-4 mt-3'>
-                    <p className='text-gray-500 font-normal leading-relaxed text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus iusto inventore, fugiat vel provident enim voluptatem non molestias, atque rerum, sed eveniet quo molestiae.</p>
-                    <p className='text-gray-500 font-normal leading-relaxed text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem placeat sint odit voluptate, eligendi asperiores.</p>
+                    <p className='text-gray-500 font-normal leading-relaxed text-base'>Sero Construction is a multifaceted commercial company, with specialization in
+                    Real Estate, Residential and Commercial construction, Design and Architectural services, building materials and Investment Consultancy.</p>
+                    <p className='text-gray-500 font-normal leading-relaxed text-base'>The company is focused
+                    on innovative and high-quality strategy in every project composition and
+                    service professionalism through an efficient management system.</p>
                 </div>
                 <div className='mt-5'>
                     <button
