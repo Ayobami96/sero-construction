@@ -87,7 +87,7 @@ export const testimonials = [
 
 export const teamMember = [
     {
-        name: 'Promise Ogungbesan',
+        name: 'Promise O. Ogungbesan',
         role: 'Founder / CEO',
         image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         linkedinHref: '/constrction-service',
@@ -95,8 +95,8 @@ export const teamMember = [
         twitterHref: '/constrction-service'
     },
     {
-        name: 'Ayobami Ogungbesan',
-        role: 'Co-Founder',
+        name: 'Temitayo Odogun',
+        role: 'Managing Director',
         image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         linkedinHref: '/constrction-service',
         instagramHref: '/constrction-service',
@@ -104,15 +104,15 @@ export const teamMember = [
     },
     {
         name: 'Courage Ogungbesan',
-        role: 'Lead Architect',
+        role: 'Chief Operations Officer',
         image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         linkedinHref: '/constrction-service',
         instagramHref: '/constrction-service',
         twitterHref: '/constrction-service'
     },
     {
-        name: 'Tayo Odunsi',
-        role: 'Lead Marketer',
+        name: 'Moses Adewale',
+        role: 'Chief Marketing Officer',
         image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         linkedinHref: '/constrction-service',
         instagramHref: '/constrction-service',

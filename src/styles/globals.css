@@ -18,7 +18,8 @@ body {
 }
 
 .hvr-sweep-to-top,
-.border-btn {
+.border-btn,
+.white-border-btn {
   display: inline-flex;
   align-items: center;
   padding: 12px 24px;
@@ -39,7 +40,8 @@ body {
 }
 
 .hvr-sweep-to-top:before,
-.border-btn:before {
+.border-btn:before,
+.white-border-btn:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -70,12 +72,22 @@ body {
 }
 
 
-.border-btn {
+.border-btn,
+.white-border-btn {
   border: 2px solid #facc15;
   background: transparent !important;
 }
 
-.border-btn:before {
+.white-border-btn {
+  border: 2px solid #fff;
+}
+
+.white-border-btn::before {
+  background: white !important;
+}
+
+.border-btn:before,
+.white-border-btn:before {
   border-radius: 0;
 }
 
@@ -83,6 +95,14 @@ body {
   color: white;
 }
 .border-btn:hover:before, .border-btn:focus:before, .border-btn:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.white-border-btn:hover, .white-border-btn:focus, .white-border-btn:active {
+  color: #facc15;
+}
+.white-border-btn:hover:before, .white-border-btn:focus:before, .white-border-btn:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
 }
