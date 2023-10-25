@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { Instagram, Twitter, Linkedin } from 'react-feather';
 import whiteLogo from '/public/assets/logo/seroowhite.png';
@@ -8,13 +9,13 @@ const Footer = () => {
     let currentYear= new Date().getFullYear(); 
 
   return (
-    <div className=' w-full bg-seroBlue relative overflow-hidden'>
+    <div className='w-full bg-seroBlue relative overflow-hidden bg-patternBg bg-no-repeat bg-cover'>
         <div className='relative w-full sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className="flex md:flex-row flex-col md:justify-center md:items-center gap-10">
                 <div className='basis-1/3 text-white'>
-                <h4 className='font-medium text-lg'>Services</h4>
+                <h4 className='font-medium text-lg'>Sero Construction</h4>
                    <div className=' mt-4'>
-                        <p className='text-base font-normal leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dicta obcaecati repellat ullam eligendi laudantium autem aspernatur error sapiente vero sequi nemo, quibusdam numquam totam.</p>
+                        <p className='text-base font-normal leading-relaxed'>The company is focused on innovative and high-quality strategy in every project composition and service professionalism through an efficient management system.</p>
                    </div>
                 </div>
                 <div className='basis-1/3 text-white md:ml-[8.3%]'>
@@ -41,9 +42,15 @@ const Footer = () => {
                 <div className='flex items-center'>
                     <hr className='text-white border-t-w-[2px] bg-white w-[1px] flex-grow mt-2' />
                     <div className='flex items-center gap-x-5 px-3'>
-                        <Instagram size={24} className='text-yellow-400' />
-                        <Twitter size={24} className='text-yellow-400' />
-                        <Linkedin size={24} className='text-yellow-400' />
+                        <Link href='https://www.instagram.com/seroconstruction/'>
+                            <Instagram size={24} className='text-yellow-400' />
+                        </Link>
+                        <Link href='#'>
+                            <Twitter size={24} className='text-yellow-400' />
+                        </Link>
+                        <Link href='#'>
+                            <Linkedin size={24} className='text-yellow-400' />
+                        </Link>
                     </div>
                     <hr className='text-white border-t-w-[2px] bg-white w-[1px] flex-grow mt-2' />
                 </div>

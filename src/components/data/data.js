@@ -9,7 +9,11 @@ import manFace from '/public/assets/images/man-face.jpeg';
 import jessicaPratt from '/public/assets/images/jessica-pratt.jpg';
 import contructionImg1 from '/public/assets/images/negotiations-of-two-intelligent-coworkers-success-2022-08-17-00-53-06-utc (1).jpg'
 import contructionImg2 from '/public/assets/images/ambitious-field-engineer-working-on-his-laptop-nea-2021-09-03-21-03-03-utc (1).jpg'
-import contructionImg3 from '/public/assets/images/professional-engineers-with-helmets-work-to-mainta-2022-10-27-04-45-58-utc (1).jpg'
+import contructionImg3 from '/public/assets/images/professional-engineers-with-helmets-work-to-mainta-2022-10-27-04-45-58-utc (1).jpg';
+import promiseCopy from '/public/assets/images/promise-copy.png';
+import tayoCopy from '/public/assets/images/tayo-copy.png';
+import courageCopy from '/public/assets/images/courage-copy.png';
+
 import {
     ChartBarIcon,
     CursorArrowRaysIcon,
@@ -85,40 +89,48 @@ export const testimonials = [
 ]
 
 
-export const teamMember = [
+export const team = [
     {
-        name: 'Promise O. Ogungbesan',
-        role: 'Founder / CEO',
-        image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        linkedinHref: '/constrction-service',
-        instagramHref: '/constrction-service',
-        twitterHref: '/constrction-service'
+      title: 'Leadership',
+      people: [
+        {
+          name: 'Promise Ogungbesan',
+          role: 'Founder / CEO',
+          image: { src: promiseCopy },
+        },
+        {
+          name: 'Temitayo Odogun',
+          role: 'Managing Director',
+          image: { src: tayoCopy },
+        },
+        {
+          name: 'Courage Ogungbesan',
+          role: 'Chief Operations Officer',
+          image: { src: courageCopy },
+        },
+      ],
     },
     {
-        name: 'Temitayo Odogun',
-        role: 'Managing Director',
-        image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        linkedinHref: '/constrction-service',
-        instagramHref: '/constrction-service',
-        twitterHref: '/constrction-service'
+      title: 'Associates',
+      people: [
+        {
+            name: 'Promise Ogungbesan',
+            role: 'Founder / CEO',
+            image: { src: promiseCopy },
+          },
+          {
+            name: 'Temitayo Odogun',
+            role: 'Managing Director',
+            image: { src: tayoCopy },
+          },
+          {
+            name: 'Courage Ogungbesan',
+            role: 'Chief Operations Officer',
+            image: { src: courageCopy },
+          },
+      ],
     },
-    {
-        name: 'Courage Ogungbesan',
-        role: 'Chief Operations Officer',
-        image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        linkedinHref: '/constrction-service',
-        instagramHref: '/constrction-service',
-        twitterHref: '/constrction-service'
-    },
-    {
-        name: 'Moses Adewale',
-        role: 'Chief Marketing Officer',
-        image: 'https://images.pexels.com/photos/6050404/pexels-photo-6050404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        linkedinHref: '/constrction-service',
-        instagramHref: '/constrction-service',
-        twitterHref: '/constrction-service'
-    },
-]
+  ]
 
 export const faqs = [
     {

@@ -11,7 +11,7 @@ const CoreValues = () => {
             <div className='hidden sm:block lg:absolute lg:right-0 lg:top-0'>
                 <Image src={patternBg} width='500' height='500' className='rotate-45' alt='ptter-bg' />
             </div>
-            <div className='text-4xl font-semibold text-seroBlue text-center'>
+            <div className='text-4xl font-semibold text-seroBlue text-center animate__animated animate__slideInUp'>
                 <h2>Our Core Values</h2>
             </div>
 
