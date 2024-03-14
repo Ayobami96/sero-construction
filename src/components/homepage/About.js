@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import workersImg from '/public/assets/images/architect.png'
+import Link from 'next/link';
 
 const About = () => {
   return (
     <div className='w-full bg-white'>
-        <div className='relative flex flex-col items-center sm:flex-row sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
+        <div className='relative flex flex-col-reverse gap-y-8 items-center lg:flex-row md:gap-y-8 lg:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
             <div className='relative block basis-1/2'>
                 <Image src={workersImg} width='600' height='600' alt="workers-img" className='rounded-xl animate__animated animate__fadeInUp'  />
             </div>
@@ -20,12 +21,13 @@ const About = () => {
                     service professionalism through an efficient management system.</p>
                 </div>
                 <div className='mt-5'>
-                    <button
+                    <Link
+                    href='/about'
                     type="button"
                     className="animate__animated animate__slideInUp hvr-sweep-to-top"
                     >
                     About Us
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

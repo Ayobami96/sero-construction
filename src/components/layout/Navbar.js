@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image"
 import seroLogo from "/public/assets/logo/serooblue.png";
+import seroConstructionLogo from "/public/assets/logo/sero-construction.png";
 import Link from "next/link";
 import { Menu, X } from "react-feather";
 import { Fragment } from "react"
@@ -19,19 +20,21 @@ const Navbar = () => {
     const [nav, setNav] = useState(false);
 
     const handleNav = () => {
-        setNav(prev=>!prev);
+        setNav(prev => !prev);
     }
 
     useEffect(() => {
         setNav(false);
     }, [])
 
+    //className="bg-yellow-400 shadow-md relative"
+
   return (
-    <div className="bg-yellow-400 shadow-md relative">
+    <div className="bg-white shadow-md relative">
         <nav className="px-4 lg:px-24 py-1 w-full md:mx-auto">
             <div className="flex items-center justify-between">
                 <div>
-                    <Link href="/"><Image src={seroLogo} width={100} height={100} alt="sero logo desktop" /></Link>
+                    <Link href="/"><Image src={seroConstructionLogo} width={180} height={100} alt="sero logo desktop" /></Link>
                 </div>
 
                 <div className="hidden lg:flex gap-x-10 text-seroBlue font-medium text-base">
@@ -75,7 +78,7 @@ const Navbar = () => {
                         onClick={() => close()}
                         className="-m-3 flex items-start rounded-lg p-3 transition duration-150 ease-in-out hover:bg-gray-50"
                         >
-                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-indigo-500 text-white sm:h-12 sm:w-12">
+                        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-[#C59E4C] text-white sm:h-12 sm:w-12">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
                         <div className="ml-4">

@@ -7,7 +7,7 @@ const CompanyOverview = () => {
     <div className='w-full bg-white relative'>    
         <div className='relative sm:mx-auto lg:px-24 lg:py-24 py-12 px-4'>
 
-            <div className='flex items-center md:gap-x-10 gap-y-6 md:flex-row flex-col justify-center'>
+            <div className='flex items-center md:gap-x-10 gap-y-8 lg:flex-row flex-col justify-center'>
                 <div className='basis-1/2 flex flex-col gap-y-4'>
                     <h2 className='font-semibold text-seroBlue text-3xl'>Company Overview</h2>
                     <p className='text-base font-normal leading-relaxed text-gray-500'>Sero Construction Limited (a.k.a Sero Construction) from the beginning started out has a construction materials and equipment supplier as well as brick making which has been in operation for almost a decade.</p>

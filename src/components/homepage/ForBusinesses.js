@@ -11,7 +11,7 @@ const ForBusinesses = () => {
             <div className='grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-3 xl:gap-8'>
                     <div className='self-start space-y-4'>
                         <h2 className='font-semibold text-seroBlue text-3xl leading-snug'>Available For Businesses and Individuals</h2>
-                        <p className='font-normal text-gray-500 text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sint temporibus, enim necessitatibus molestiae saepe minus.</p>
+                        <p className='font-normal text-gray-500 text-base'>We help Individuals, associations & business owners create wealth through real estate and build comfortable, affordable, smart, luxury homes with impeccable finesse.</p>
                     </div>
                     <div>
                         <div className='bg-seroBlue p-6 rounded-lg space-y-4 pb-16 h-[350px]'>  

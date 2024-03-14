@@ -22,7 +22,7 @@ const Services = () => {
                         <div className='basis-1/2'>
                             <Image src={image} width='100%' height='500' className='rounded-xl' alt='' />
                         </div>
-                       <div className={`basis-1/2 space-y-6 ${key%2 === 0 ? 'order-last' : 'order-first'}`}>
+                       <div className={`basis-1/2 space-y-6 ${key%2 === 0 ? 'sm:order-last' : 'sm:order-first'}`}>
                             <h2 className='text-white font-semibold text-3xl'>{title}</h2>
                             <p className='font-normal text-white text-base leading-relaxed'>{description}</p>
                             <div>

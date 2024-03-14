@@ -1,50 +1,31 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
-import { Instagram, Linkedin, Twitter } from 'react-feather'
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import { Instagram, Linkedin, Twitter } from 'react-feather';
+import { useForm } from "react-hook-form"
 
 
 
 const ContactForm = () => {
 
-  const [contactDetails, setContactDetails] = useState({
-    user_name: '',
-    user_lastname: '',
-    user_email: '',
-    user_phone: '',
-    user_subject: '',
-    message: '',
+  const {register, handleSubmit, formState: {errors}, reset} = useForm({
+    defaultValues: {
+      user_name: "",
+      user_lastname: "",
+      user_email: "",
+      user_phone: "",
+      user_subject: "",
+      message: "",
+    }
   })
-
-  const handleChange = (e) => {
-    const {name, value} = e.target
-
-    setContactDetails((prevValue) => {
-      return {
-        ...prevValue,
-        [name]: value
-      }
-
-      console.log(prevValue);
-    })
-  }
 
     const form = useRef();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-
+    const sendEmail = () => {
       emailjs.sendForm('service_jw4esws', 'template_ybwzlmf', form.current, 'TScVRtSxjchoseKm2')
         .then((result) => {
             console.log(result.text);
-            setContactDetails({
-              user_name: '',
-              user_lastname: '',
-              user_email: '',
-              user_phone: '',
-              user_subject: '',
-              message: '',
-            })
+            reset()
         }, (error) => {
             console.log(error.text);
         });
@@ -58,7 +39,7 @@ const ContactForm = () => {
         <section className="relative bg-white" aria-labelledby="contact-heading">
           <div className="absolute h-1/2 w-full bg-warm-gray-50" aria-hidden="true" />
           {/* Decorative dot pattern */}
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl px-3 lg:px-8">
             <svg
               className="absolute text-gray-300 top-0 right-0 z-0 -translate-y-16 translate-x-1/2 transform sm:translate-x-1/4 md:-translate-y-24 lg:-translate-y-72"
               width={404}
@@ -231,21 +212,18 @@ const ContactForm = () => {
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                   <h3 className="text-lg font-medium text-warm-gray-900">Send us a message</h3>
-                  <form method='POST' ref={form} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={sendEmail}>
+                  <form ref={form} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" onSubmit={handleSubmit(sendEmail)}>
                     <div>
                       <label htmlFor="first-name" className="block text-sm font-medium text-warm-gray-900">
                         First name
                       </label>
                       <div className="mt-1">
                         <input
-                          type="text"
-                          name="user_name"
-                          id="first-name"
+                          {...register("user_name", {required: 'Please, enter your first-name'})}
                           autoComplete="given-name"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
-                          onChange={handleChange}
-                          value={contactDetails.user_name}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.user_name?.message}</p>
                       </div>
                     </div>
                     <div>
@@ -254,14 +232,11 @@ const ContactForm = () => {
                       </label>
                       <div className="mt-1">
                         <input
-                          type="text"
-                          name="user_lastname"
-                          id="last-name"
+                           {...register("user_lastname", {required: 'Please, enter your last-name'})}
                           autoComplete="family-name"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
-                          onChange={handleChange}
-                          value={contactDetails.user_lastname}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.user_lastname?.message}</p>
                       </div>
                     </div>
                     <div>
@@ -270,14 +245,11 @@ const ContactForm = () => {
                       </label>
                       <div className="mt-1">
                         <input
-                          id="email"
-                          name="user_email"
-                          type="email"
+                        {...register("user_email", {required: 'Please, enter your email'})}
                           autoComplete="email"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
-                          onChange={handleChange}
-                          value={contactDetails.user_email}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.user_email?.message}</p>
                       </div>
                     </div>
                     <div>
@@ -291,15 +263,11 @@ const ContactForm = () => {
                       </div>
                       <div className="mt-1">
                         <input
-                          type="text"
-                          name="user_phone"
-                          id="phone"
+                          {...register("user_phone")}
                           autoComplete="tel"
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
-                          aria-describedby="phone-optional"
-                          onChange={handleChange}
-                          value={contactDetails.user_phone}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.user_phone?.message}</p>
                       </div>
                     </div>
                     <div className="sm:col-span-2">
@@ -308,13 +276,10 @@ const ContactForm = () => {
                       </label>
                       <div className="mt-1">
                         <input
-                          type="text"
-                          name="user_subject"
-                          id="subject"
+                          {...register("user_subject", {required: 'Please, enter a valid subject'})}
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
-                          onChange={handleChange}
-                          value={contactDetails.user_subject}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.user_subject?.message}</p>
                       </div>
                     </div>
                     <div className="sm:col-span-2">
@@ -328,15 +293,12 @@ const ContactForm = () => {
                       </div>
                       <div className="mt-1">
                         <textarea
-                          id="message"
-                          name="message"
+                         {...register("message", {required: 'Please, leave us a message'})}
                           rows={4}
                           className="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-seroBlue focus:ring-seroBlue"
                           aria-describedby="message-max"
-                          onChange={handleChange}
-                          value={contactDetails.message}
-                          defaultValue={''}
                         />
+                        <p className='text-red-500 text-sm px-[12px] mt-1'>{errors.message?.message}</p>
                       </div>
                     </div>
                     <div className="sm:col-span-2 sm:flex sm:justify-end">
